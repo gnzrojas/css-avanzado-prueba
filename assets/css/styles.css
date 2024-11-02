@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para contenedor grid */
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "aside main"
+    "footer footer" ;
+    gap: 0.5em;
+    min-height: 100vh;
+    grid-template-rows: 1fr 10fr 1fr;
+    grid-template-columns: 2fr 10fr;
+
+}
+
+/* Estilos para Header */
+header {
+    grid-area: header;
+    background-color: #A66E38;
+}
+
+/* Estilos para Barra lateral */
+aside {
+    grid-area: aside; 
+    background-color: #FFAD60;
+}
+
+
+/* Estilos para sección principal */
+main {
+    grid-area: main;
+    background-color: #FFEEAD;
+    }
+
+.gallery {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 2em;
+    padding: 1em;
+
+}       
+
+.products {
+    border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 1em;
+    
+}
+
+.images {
+    width: 90%;
+    height: 80%;
+    object-fit: contain;
+}
+
+.products > p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+ /*Estilos para footer  */
+footer {
+    grid-area: footer;
+    background-color: #96CEB4;
+}
