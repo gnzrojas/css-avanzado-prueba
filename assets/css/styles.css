@@ -118,4 +118,23 @@ main {
 footer {
     grid-area: footer;
     background-color: #96CEB4;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+
+}
+
+footer > p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 0.3em;
+}
+
+.social-icon {
+    justify-content: center;
+}
+
+.icon {
+    font-size: 1.3em;
 }
