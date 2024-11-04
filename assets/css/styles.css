@@ -8,13 +8,13 @@
 .grid-container {
     display: grid;
     grid-template-areas: 
-    "header header"
-    "aside main"
-    "footer footer" ;
-    gap: 0.5em;
+    "header"
+    "main"
+    "footer" ;
+
     min-height: 100vh;
-    grid-template-rows: 1fr 10fr 1fr;
-    grid-template-columns: 2fr 10fr;
+    grid-template-rows: 5% 85% 10%;
+    grid-template-columns: 1fr;
 
 }
 
@@ -22,12 +22,25 @@
 header {
     grid-area: header;
     background-color: #A66E38;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    padding: 0.5em;
+}
+
+/* Estilos para el logo */
+.logo {
+    width: 3.5em;
+    height: 3.5em;
 }
 
 /* Estilos para Barra lateral */
 aside {
     grid-area: aside; 
     background-color: #FFAD60;
+    display: none;
 }
 
 
@@ -39,14 +52,15 @@ main {
 
 .gallery {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto;
     gap: 2em;
     padding: 1em;
 
 }       
 
 .products {
-    border: 2px solid red;
+    border: 1px solid #A66E38;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,14 +71,30 @@ main {
 }
 
 .images {
-    width: 90%;
-    height: 80%;
+    width: 18em;
+    height: 18em;
     object-fit: contain;
+    filter: grayscale(100%);
+    transition: transform 0.5s;
+    padding-bottom: 1em;
+    
+}
+
+.images:hover {
+    filter: none;
+    cursor: pointer;
+    transform: scale(1.1);
+
+
 }
 
 .products > p {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    padding: 0.5em;
+    padding: 0.3em;
+}
+
+.precio {
+    color: #A66E38;
 }
 
 .comprar {
@@ -79,7 +109,7 @@ main {
 
 .comprar:hover {
     cursor: pointer;
-    background-color: #000000;
+    background-color: #A66E38;
     color: #ffffff;
     
 }
