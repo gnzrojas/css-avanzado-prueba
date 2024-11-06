@@ -157,21 +157,80 @@ footer>p {
 
     }
 
-    header > i {
+    .hamburger {
         display: none;
     }
 
     aside {
         display: flex;
         flex-direction: column;
+
+    }
+
+    .menu {
+        padding-top: 1em;
+        list-style: none;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .menu>li>a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .menu>li {
+        padding-bottom: 1em;
+        padding-top: 1em;
+        width: 100%;
+        font-size: 19px;
+
+    }
+
+    .menu>li:hover {
+        cursor: pointer;
+        background-color: #FFEEAD;
+        border: 1px solid black;
+    }
+
+    .description {
+        text-align: center;
+        padding: 1em;
     }
 
     .gallery {
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: 1fr 1fr;
         gap: 2em;
         padding: 1em;
-    
+
     }
 }
 
+@media (min-width: 992px) {
+
+    /* Estilos para contenedor grid */
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+            "header header header"
+            "aside main main"
+            "footer footer footer";
+        min-height: 100vh;
+        grid-template-rows: 5% 85% 10%;
+        grid-template-columns: 2fr 10fr;
+
+    }
+
+    .gallery{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2em;
+        padding: 1em;
+
+    }
+}
