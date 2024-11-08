@@ -166,7 +166,7 @@ footer>p {
     }
 
     .hamburger{
-        display: none;
+        display: inline;
     }
 
     aside {
@@ -218,6 +218,8 @@ footer>p {
 
     }
 }
+
+/*------------------ VERSIÓN PC---------------------- */
 
 @media (min-width: 992px) {
 
