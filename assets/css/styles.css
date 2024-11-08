@@ -166,7 +166,7 @@ footer>p {
     }
 
     .hamburger{
-        display: inline;
+        display: none;
     }
 
     aside {
